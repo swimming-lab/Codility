@@ -1,3 +1,5 @@
+package com.swimming.codility;
+
 public class Lesson2_CyclicRotation {
     public int[] solution(int[] A, int K) {
         // write your code in Java SE 8

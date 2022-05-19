@@ -1,3 +1,5 @@
+package com.swimming.codility;
+
 public class Lesson1_BinaryGap {
     public int solution(int N) {
         // write your code in Java SE 8
@@ -20,7 +22,6 @@ public class Lesson1_BinaryGap {
                 System.out.println("2. startIndex =" + startIndex);
             }
         }
-
 
         System.out.println("result =" + result);
         System.out.println("end~!");
