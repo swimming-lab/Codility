@@ -2,8 +2,7 @@ package com.swimming.codility;
 
 public class Lesson2_CyclicRotation {
     public int[] solution(int[] A, int K) {
-        // write your code in Java SE 8
-
+        // correctness 100%, performance 100%
         int shift = 0;
         if (A.length == 1 || A.length == 0) {
             shift = 0;

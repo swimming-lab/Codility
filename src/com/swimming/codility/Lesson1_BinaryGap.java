@@ -2,7 +2,7 @@ package com.swimming.codility;
 
 public class Lesson1_BinaryGap {
     public int solution(int N) {
-        // write your code in Java SE 8
+        // correctness 100%, performance 100%
         char[] binaries = Integer.toBinaryString(N).toCharArray();
         System.out.println("start~!");
         System.out.println("N =" + N);
