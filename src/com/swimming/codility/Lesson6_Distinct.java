@@ -1,30 +1,18 @@
 package com.swimming.codility;
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Lesson6_Distinct {
     public int solution(int[] A) {
-        // correctness 100%, performance 0%, O(B-A)
-        Arrays.sort(A);
+        // correctness 100%, performance 100%, O(N)
         int result = 0;
-        int count = 0;
 
-        if (A.length > 0) {
-            result = A[0];
-            count = 1;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i=0; i<A.length; i++) {
+            map.put(A[i], 1);
         }
-
-        for (int i=1; i<A.length; i++) {
-            if (A[i] != result) {
-                if (count == 1) {
-                    break;
-                }
-                result = A[i];
-                count = 1;
-            } else {
-                count++;
-            }
-        }
+        result = map.size();
 
         return result;
     }
