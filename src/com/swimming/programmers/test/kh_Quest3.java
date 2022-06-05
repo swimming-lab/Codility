@@ -9,7 +9,7 @@ public class kh_Quest3 {
     // 하 우 상 좌 순으로 움직임
 //    private static final int[] DR = {1, 0, -1, 0};
 //    private static final int[] DC = {0, 1, 0, -1};
-    // 하 우 상 좌 > 상 제거
+    // 하 우 상 좌 > 상 제거 : [0][0]배열에서 아래로만 탐색하기 때문
     private static final int[] DR = {1, 0, 0};
     private static final int[] DC = {0, 1, -1};
 
@@ -59,10 +59,9 @@ public class kh_Quest3 {
                 int nextR = cur.r + DR[i];
                 int nextC = cur.c + DC[i];
                 int cost = cur.cost + 1;
-                boolean[][] visited = cur.visited;
 
                 // 다음 탐색할 위치가 맵을 벗어나거나 이전에 방문한 곳인 경우 탐색 제외
-                if (nextR < 0 || nextR >= R || nextC < 0 || nextC >= C || visited[nextR][nextC]) {
+                if (nextR < 0 || nextR >= R || nextC < 0 || nextC >= C || cur.visited[nextR][nextC]) {
                     continue;
                 }
 
@@ -74,12 +73,12 @@ public class kh_Quest3 {
                 // 목적지 도착
                 if (board[nextR][nextC] == END_POSTION) {
                     answer = Math.min(answer, cost);
-//                    System.out.println(cost);
+                    // System.out.println(cost);
                 } else {
                     // 큐에 다음 탐색할 곳을 추가, 방문했던 위치 체크
-                    boolean[][] newVisited = new boolean[R][C];
-                    newVisited[cur.r][cur.c] = true;
-                    q.add(new Pos(nextR, nextC, cost, newVisited));
+                    boolean[][] visited = new boolean[R][C];
+                    visited[cur.r][cur.c] = true;
+                    q.add(new Pos(nextR, nextC, cost, visited));
                 }
             }
         }
@@ -98,7 +97,6 @@ public class kh_Quest3 {
                     {0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
                     {0, 0, 0, 0, 3, 0, 0, 0, 1, 0}
                 },1);
-        System.out.println("----------");
         int result2 = solution.solution(new int[][]
                 {
                     {0, 0, 0, 0, 2, 0, 0, 0, 0, 0},
@@ -110,6 +108,7 @@ public class kh_Quest3 {
                 },2);
 
         System.out.println(result1); // 9
+        System.out.println("----------");
         System.out.println(result2); // 11
     }
 }
