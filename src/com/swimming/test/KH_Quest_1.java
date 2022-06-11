@@ -1,13 +1,12 @@
-package com.swimming.programmers.test;
+package com.swimming.test;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class kh_Quest1 {
-    /**
-     * Lev.1 완주하지 못한 선수
-     * 100%
-     */
+/**
+ * kakaohair
+ */
+public class KH_Quest_1 {
     public int solution(int N) {
         int answer = -1;
 
@@ -39,7 +38,7 @@ public class kh_Quest1 {
     }
 
     public static void main(String[] args) {
-        final kh_Quest1 solution = new kh_Quest1();
+        final KH_Quest_1 solution = new KH_Quest_1();
         int result = solution.solution(2613);
 
         System.out.println(result);

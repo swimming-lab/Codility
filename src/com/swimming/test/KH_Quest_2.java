@@ -1,10 +1,9 @@
-package com.swimming.programmers.test;
+package com.swimming.test;
 
-public class kh_Quest2 {
-    /**
-     * Lev.1 완주하지 못한 선수
-     * 100%
-     */
+/**
+ * kakaohair
+ */
+public class KH_Quest_2 {
     public int solution(long N) {
         int answer = 0;
 
@@ -32,7 +31,7 @@ public class kh_Quest2 {
     }
 
     public static void main(String[] args) {
-        final kh_Quest2 solution = new kh_Quest2();
+        final KH_Quest_2 solution = new KH_Quest_2();
         int result = solution.solution(4);
 
         System.out.println(result);

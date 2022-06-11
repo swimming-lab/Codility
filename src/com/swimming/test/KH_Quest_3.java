@@ -1,11 +1,11 @@
-package com.swimming.programmers.test;
+package com.swimming.test;
 
 import java.util.*;
 
 /**
  * kakaohair
  */
-public class kh_Quest3 {
+public class KH_Quest_3 {
     // 하 우 상 좌 순으로 움직임
 //    private static final int[] DR = {1, 0, -1, 0};
 //    private static final int[] DC = {0, 1, 0, -1};
@@ -87,7 +87,7 @@ public class kh_Quest3 {
     }
 
     public static void main(String[] args) {
-        final kh_Quest3 solution = new kh_Quest3();
+        final KH_Quest_3 solution = new KH_Quest_3();
         int result1 = solution.solution(new int[][]
                 {
                     {0, 0, 0, 0, 2, 0, 0, 0, 0, 0},
