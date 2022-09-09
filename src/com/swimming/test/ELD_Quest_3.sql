@@ -1,0 +1,7 @@
+SELECT * FROM `PURCHASES` as pc
+                  LEFT OUTER JOIN `PAYMENTS` as pm ON (pm.USER_ID = pc.USER_ID)
+WHERE pm.AMOUNT is NULL
+UNION
+SELECT * FROM  `PURCHASES` as pc
+                   RIGHT OUTER JOIN `PAYMENTS` as pm ON (pm.USER_ID = pc.USER_ID)
+WHERE pm.PAY_DATE > pc.PURCHASE_DATE
