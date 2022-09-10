@@ -1,6 +1,7 @@
 package com.swimming.programmers;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 정렬
@@ -24,10 +25,10 @@ import java.util.*;
  */
 class Sort_42746 {
     public String solution(int[] numbers) {
-        List<Integer> list = new ArrayList<>();
-    	for(int i=0; i<numbers.length; i++) {
-    		list.add(numbers[i]);
-    	}
+        List<Integer> list = Arrays.stream(numbers).boxed().collect(Collectors.toList());
+//    	for(int i=0; i<numbers.length; i++) {
+//    		list.add(numbers[i]);
+//    	}
     	
     	Collections.sort(list, (a, b)-> {
     			String as = String.valueOf(a);
@@ -61,3 +62,4 @@ class Sort_42746 {
         System.out.println(result);
     }
 }
+
