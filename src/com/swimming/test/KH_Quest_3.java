@@ -20,11 +20,17 @@ public class KH_Quest_3 {
     static class Pos {
         int r, c, cost;
         boolean[][] visited;
+        int[] DC = {0, 1, -1};
+
         public Pos(int r, int c, int cost, boolean[][] visited) {
             this.r = r;
             this.c = c;
             this.cost = cost;
             this.visited = visited;
+            for (int i=0; i<this.DC.length; i++) {
+                int i1 = DR[i];
+            }
+            int length = DR.length;
         }
     }
 
@@ -112,5 +118,6 @@ public class KH_Quest_3 {
         System.out.println(result2); // 11
     }
 }
+
 
 
